@@ -53,11 +53,11 @@ class Task_Manager:
             print(f'{date} - {task} viewed')
 
     def load_view_history(self):
-        with open('view_history.txt', 'r') as f:
+        with open('view_history.json', 'r') as f:
             self.view_history = json.load(f)
 
     def save_view_history(self):
-        with open('view_history.txt', 'w') as f:
+        with open('view_history.json', 'w') as f:
             json.dump(self.view_history, f, indent=4)
 
     # для сохранения задач в файле
